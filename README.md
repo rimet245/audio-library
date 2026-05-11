@@ -1,36 +1,58 @@
 # Audio Library
 
-Ročníkový projekt — předmět Programování, 2. ročník IT.
-Interaktivní hudební knihovna postavená nad TypeScriptem a principy OOP.
+> 🇨🇿 Česká verze: [README.cs.md](./README.cs.md)
 
-## Spuštění
+School project for the *Programming* course (2nd year, IT branch).
+An interactive audio library built on TypeScript and the four pillars of object-oriented programming.
+
+## Quick start
 
 ```bash
 npm install
-npm run dev
+npm run build       # compiles src/*.ts → dist/*.js
+npm run serve       # starts a local HTTP server on port 5173
 ```
 
-Aplikace běží na `http://localhost:5173`. Otevři DevTools (F12 → Console) — výstup se vypisuje tam.
+Open <http://localhost:5173>, then press **F12 → Console** to see the polymorphic output.
 
-## Struktura
+Alternatively, run the compiled output directly through Node:
+
+```bash
+node dist/main.js
+```
+
+## Project structure
 
 ```
-src/
+src/                       # TypeScript source
 ├── models/
-│   ├── AudioItem.ts   — abstraktní bázová třída
-│   ├── Track.ts       — hudební skladba (192 kbps)
-│   └── Podcast.ts     — podcastová epizoda (64 kbps, progres)
-├── data.ts            — katalog (instance tříd)
-└── main.ts            — testovací výpis do konzole (polymorfismus)
+│   ├── AudioItem.ts       # abstract base class
+│   ├── Track.ts           # music track (192 kbps)
+│   └── Podcast.ts         # podcast episode (64 kbps, progress)
+├── data.ts                # catalog (instances of the classes)
+└── main.ts                # console demo (polymorphism)
+
+dist/                      # JavaScript output (committed for review)
+├── models/
+│   ├── AudioItem.js
+│   ├── Track.js
+│   └── Podcast.js
+├── data.js
+└── main.js
 ```
 
-## OOP pilíře v projektu
+## OOP pillars in the code
 
-- **Abstrakce** — `abstract class AudioItem` se dvěma abstraktními metodami.
-- **Zapouzdření** — `protected` atributy v rodičovské třídě, `private` atributy v potomcích, validace v setteru `progress`.
-- **Dědičnost** — `Track extends AudioItem`, `Podcast extends AudioItem`, `super()` v konstruktorech.
-- **Polymorfismus** — `AudioItem[]` s mixem typů, jednotné volání `getInfo()` a `calculateSize()`.
+- **Abstraction** — `abstract class AudioItem` with two abstract methods. You cannot instantiate `AudioItem` directly.
+- **Encapsulation** — `protected` fields on the parent, `private` fields on the children. `_progress` is guarded by a setter that clamps the value to `0–1`.
+- **Inheritance** — `class Track extends AudioItem`, `class Podcast extends AudioItem`, with `super()` calls in the constructors.
+- **Polymorphism** — a single `AudioItem[]` holds a mix of `Track` and `Podcast` instances. The iteration in `main.ts` calls `getInfo()` and `calculateSize()` uniformly, without checking the runtime type.
 
-## Dokumentace
+## Documentation
 
-Část I. (teoretický rozbor) je v `docs/Audio_Library_Cast_I.docx`.
+Part I (theoretical analysis) is in [`docs/Audio_Library_Cast_I.docx`](./docs/Audio_Library_Cast_I.docx).
+The UML class diagram is in [`docs/uml-diagram.png`](./docs/uml-diagram.png).
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
