@@ -1,4 +1,4 @@
-import { AudioItem } from "./AudioItem";
+import { AudioItem } from "./AudioItem.js";
 
 /**
  * Hudební skladba — potomek AudioItem.

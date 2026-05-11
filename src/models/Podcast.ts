@@ -1,4 +1,4 @@
-import { AudioItem } from "./AudioItem";
+import { AudioItem } from "./AudioItem.js";
 
 /**
  * Podcastová epizoda — potomek AudioItem.

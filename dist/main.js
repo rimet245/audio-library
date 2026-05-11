@@ -1,5 +1,4 @@
 import { catalog } from "./data.js";
-
 /**
  * Vstupní bod aplikace — test v konzoli.
  *
@@ -9,7 +8,5 @@ import { catalog } from "./data.js";
  * nebo Podcast — každý objekt si zavolá svou vlastní implementaci.
  */
 catalog.forEach((item) => {
-  console.log(
-    `${item.getInfo()} | ${item.formatDuration()} | ${item.calculateSize().toFixed(2)} MB`,
-  );
+    console.log(`${item.getInfo()} | ${item.formatDuration()} | ${item.calculateSize().toFixed(2)} MB`);
 });

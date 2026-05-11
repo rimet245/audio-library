@@ -4,12 +4,11 @@
   "description": "Interaktivní hudební knihovna — TypeScript + OOP. Ročníkový projekt, IT2A.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "npx http-server -p 5173 -c-1"
   },
   "devDependencies": {
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "typescript": "^5.6.3"
   }
 }
