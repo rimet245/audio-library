@@ -2,7 +2,6 @@
 
 > 🇨🇿 Česká verze: [README.cs.md](./README.cs.md)
 
-School project for the *Programming* course (2nd year, IT branch).
 An interactive audio library built on TypeScript and the four pillars of object-oriented programming.
 
 ## Quick start

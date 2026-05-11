@@ -2,7 +2,6 @@
 
 > 🇬🇧 English version: [README.md](./README.md)
 
-Ročníkový projekt — předmět *Programování*, 2. ročník IT.
 Interaktivní hudební knihovna postavená nad TypeScriptem a čtyřmi pilíři objektově orientovaného programování.
 
 ## Rychlé spuštění
