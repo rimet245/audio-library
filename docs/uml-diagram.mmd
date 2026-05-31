@@ -1,35 +1,39 @@
 classDiagram
     class AudioItem {
         <<abstract>>
-        #_id: number
-        #_title: string
-        #_author: string
-        #_duration: number
-        +id: number
-        +title: string
-        +author: string
-        +duration: number
-        +set duration(v: number) : void
-        +getInfo()* : string
-        +calculateSize()* : number
-        +formatDuration() : string
+        #title: string
+        #author: string
+        #duration: number
+        +durationInSeconds() number
+        +formatDuration() string
+        +getInfo()* string
+        +calculateSize()* number
     }
 
     class Track {
-        -_genre: string
-        +genre: string
-        +set genre(v: string) : void
-        +getInfo() : string
-        +calculateSize() : number
+        -genre: string
+        +getInfo() string
+        +calculateSize() number
     }
 
     class Podcast {
         -_progress: number
-        +progress: number
-        +set progress(v: number) : void
-        +getInfo() : string
-        +calculateSize() : number
+        +progress() number
+        +progress(value: number) void
+        +getInfo() string
+        +calculateSize() number
+    }
+
+    class Library {
+        -items: AudioItem[]
+        +count() number
+        +add(item: AudioItem) void
+        +remove(index: number) void
+        +getAll() AudioItem[]
+        +totalDuration() number
+        +totalSize() number
     }
 
     AudioItem <|-- Track
     AudioItem <|-- Podcast
+    Library o-- AudioItem : obsahuje
