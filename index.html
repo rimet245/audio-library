@@ -4,9 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audio Library</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <p>Otevřít konzoli (F12 → Console).</p>
+    <header class="topbar">
+      <h1>Audio Library</h1>
+      <p class="topbar__subtitle">
+        Interaktivní hudební knihovna — TypeScript a objektově orientované programování
+      </p>
+    </header>
+
+    <main class="layout">
+      <!-- Levý sloupec: formulář pro přidání položky -->
+      <section class="panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Přidat položku</h2>
+        <form id="add-form" class="form">
+          <label class="field">
+            <span>Typ</span>
+            <select id="item-type" name="type">
+              <option value="track">Skladba</option>
+              <option value="podcast">Podcast</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Název</span>
+            <input id="item-title" name="title" type="text" required />
+          </label>
+
+          <label class="field">
+            <span>Autor / interpret</span>
+            <input id="item-author" name="author" type="text" required />
+          </label>
+
+          <fieldset class="field field--duration">
+            <legend>Délka</legend>
+            <div class="duration-inputs">
+              <label>
+                <input id="item-minutes" name="minutes" type="number" min="0" value="0" />
+                <span>min</span>
+              </label>
+              <label>
+                <input id="item-seconds" name="seconds" type="number" min="0" max="59" value="0" />
+                <span>s</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field" id="genre-field">
+            <span>Žánr</span>
+            <input id="item-genre" name="genre" type="text" placeholder="např. rock" />
+          </label>
+
+          <button type="submit" class="btn btn--primary">Přidat do knihovny</button>
+        </form>
+      </section>
+
+      <!-- Pravý sloupec: seznam položek + souhrn -->
+      <section class="panel" aria-labelledby="catalog-heading">
+        <div class="catalog-head">
+          <h2 id="catalog-heading">Knihovna</h2>
+          <div id="filters" class="filters">
+            <button type="button" class="filter is-active" data-filter="all">Vše</button>
+            <button type="button" class="filter" data-filter="track">Skladby</button>
+            <button type="button" class="filter" data-filter="podcast">Podcasty</button>
+          </div>
+        </div>
+
+        <div id="catalog" class="catalog"></div>
+
+        <footer class="summary">
+          <div class="summary__item">
+            <span class="summary__label">Počet položek</span>
+            <span id="stat-count" class="summary__value">0</span>
+          </div>
+          <div class="summary__item">
+            <span class="summary__label">Celková délka</span>
+            <span id="stat-duration" class="summary__value">0:00</span>
+          </div>
+          <div class="summary__item">
+            <span class="summary__label">Celková velikost</span>
+            <span id="stat-size" class="summary__value">0.00 MB</span>
+          </div>
+        </footer>
+      </section>
+    </main>
+
     <script type="module" src="./dist/main.js"></script>
   </body>
 </html>
