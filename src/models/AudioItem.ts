@@ -16,6 +16,17 @@ export abstract class AudioItem {
     protected duration: number,
   ) {}
 
+  /**
+   * Délka v sekundách, jen pro čtení.
+   *
+   * Samotný atribut `duration` zůstává protected (zapouzdření), ale Library
+   * potřebuje sčítat délky všech položek — proto sem přidávám read-only getter.
+   * Zvenčí jde hodnotu přečíst, ale ne přepsat.
+   */
+  get durationInSeconds(): number {
+    return this.duration;
+  }
+
   /** Vrátí délku ve formátu mm:ss. */
   formatDuration(): string {
     const m = Math.floor(this.duration / 60);
