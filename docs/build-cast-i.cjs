@@ -444,8 +444,7 @@ const ch5 = [
   ),
   blank(),
   h('Repozitář projektu', HeadingLevel.HEADING_2),
-  p('Veřejný repozitář na GitHubu: https://github.com/__USERNAME__/audio-library'),
-  p('(odkaz bude doplněn po vytvoření a prvním commitu)'),
+  p('Veřejný repozitář na GitHubu: https://github.com/rimet245/audio-library'),
 ];
 
 // ============ DOCUMENT ============

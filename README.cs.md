@@ -51,8 +51,10 @@ dist/                      # JavaScript výstup (commitnuto pro kontrolu)
 
 ## Dokumentace
 
-Část I. (teoretický rozbor) je v [`docs/Audio_Library_Cast_I.docx`](./docs/Audio_Library_Cast_I.docx).
 UML diagram tříd je v [`docs/uml-diagram.png`](./docs/uml-diagram.png).
+
+Psaná dokumentace (Část I–III) se generuje skripty `docs/build-*.cjs` do dokumentů Wordu
+a odevzdává se samostatně, proto ji ve verzování nedržím (viz `.gitignore`).
 
 ## Licence
 
