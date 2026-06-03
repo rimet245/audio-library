@@ -3,9 +3,11 @@ node_modules/
 *.log
 .claude/
 
-# Generované dokumenty a externí/studijní soubory — patří do odevzdávaného
-# ZIPu, ne do gitu. Word dokumenty se dají znovu vytvořit skripty docs/build-*.cjs.
+# Dokumentace a její generování patří do odevzdávaného ZIPu (zůstává na disku),
+# ne do gitu. V repozitáři je jen funkční aplikace a UML diagram.
 docs/*.docx
+docs/build-*.cjs
+docs/ui-*.png
 docs/Audio_Library_zadani_Cast_II.pdf
 /Audio_Library_Cast_III.pdf
 /Audio_Library_Obhajoba_tahak.md

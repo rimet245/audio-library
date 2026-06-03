@@ -53,8 +53,8 @@ dist/                      # JavaScript výstup (commitnuto pro kontrolu)
 
 UML diagram tříd je v [`docs/uml-diagram.png`](./docs/uml-diagram.png).
 
-Psaná dokumentace (Část I–III) se generuje skripty `docs/build-*.cjs` do dokumentů Wordu
-a odevzdává se samostatně, proto ji ve verzování nedržím (viz `.gitignore`).
+Psaná dokumentace (Část I–III) se odevzdává samostatně jako PDF a není součástí
+tohoto repozitáře (viz `.gitignore`).
 
 ## Licence
 
