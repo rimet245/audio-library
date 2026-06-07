@@ -6,8 +6,13 @@ node_modules/
 # Dokumentace a její generování patří do odevzdávaného ZIPu (zůstává na disku),
 # ne do gitu. V repozitáři je jen funkční aplikace a UML diagram.
 docs/*.docx
+docs/*.pdf
 docs/build-*.cjs
 docs/ui-*.png
-docs/Audio_Library_zadani_Cast_II.pdf
+docs/_pdf/
 /Audio_Library_Cast_III.pdf
 /Audio_Library_Obhajoba_tahak.md
+
+# Referenční materiály (cizí projekt) — nepatří do tohoto repozitáře.
+/POS-projekt copy/
+/richard-metzner copy.pdf
