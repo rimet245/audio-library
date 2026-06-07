@@ -4,6 +4,8 @@
 
 An interactive audio library built on TypeScript and the four pillars of object-oriented programming.
 
+**Live demo:** <https://rimet245.github.io/audio-library/>
+
 ## Quick start
 
 ```bash

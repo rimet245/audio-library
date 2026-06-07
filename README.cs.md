@@ -4,6 +4,8 @@
 
 Interaktivní hudební knihovna postavená nad TypeScriptem a čtyřmi pilíři objektově orientovaného programování.
 
+**Živé demo:** <https://rimet245.github.io/audio-library/>
+
 ## Rychlé spuštění
 
 ```bash
